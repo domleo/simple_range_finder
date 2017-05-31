@@ -23,29 +23,26 @@ void setup()
 
   pinMode(8, INPUT); // Set pin 3 as monitor pin
 
-
   lcd.setCursor(0,0);  //Display position
   lcd.print("Range:");
 }
+
 void loop()
 {
 
   pulseWidth = pulseIn(8, HIGH); // Count how long the pulse is high in microseconds
 
-  // If we get a reading that isn't zero, let's print it
-  //if(pulseWidth != 0)
-  //{
-    pulseWidth = pulseWidth / 10; // 10usec = 1 cm of distance
-    //Serial.println(pulseWidth); // Print the distance
-    
-    lcd.setCursor(0,1);  //Display position
-    if(pulseWidth >= 100)
-      lcd.print( String(pulseWidth/100.0) + " m      ");
-    else
-      lcd.print( String(pulseWidth) + " cm     ");
-      
-    delay(100);
-  //}
+   pulseWidth = pulseWidth / 10; // 10usec = 1 cm of distance
+   //Serial.println(pulseWidth); // Print the distance
+   
+   lcd.setCursor(0,1);  //Display position
+   
+   if(pulseWidth >= 100)
+     lcd.print( String(pulseWidth/100.0) + " m      ");
+   else
+     lcd.print( String(pulseWidth) + " cm     ");
+     
+   delay(100);
   
  }
 
