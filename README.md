@@ -19,6 +19,7 @@ The 1k Ohm Resistor is for the Lidar and the 220 Ohm Resistor is for the LCD dis
 [Video](https://youtu.be/Um8i5tzrJPA)
 
 ![alt text](Physical_Image.jpg "Physical Image")
+![alt text](Fritzing_diagram_export.jpg "Schematic")
 
 ---
 ##### Garmin Lidar Lit v3
